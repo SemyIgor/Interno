@@ -1,0 +1,42 @@
+%flexRowStart {
+   display: flex;
+   justify-content: start;
+   align-items: center;
+}
+
+%flexRowCenter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+%flexRowBetween {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+%flexColumn {
+   display: flex;
+   flex-direction: column;
+}
+
+%flexColumnCenter {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+%flexColumnBetween {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+%perksFont {
+   color: #000;
+   font-size: 24px;
+   font-weight: 300;
+}

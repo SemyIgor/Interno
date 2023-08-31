@@ -1,0 +1,38 @@
+		{"cards": [
+			{
+				"cardImagePath": "./img/blog/blog_img1.png",
+				"cardImageAlt": "news-card-1",
+				"cardHeader": "Let’s Get Solution For Building Construction <br>Work",
+				"cardData": "26 December,2022"
+			},
+			{
+				"cardImagePath": "./img/blog/blog_img2.png",
+				"cardImageAlt": "news-card-2",
+				"cardHeader": "Low Cost Latest Invented Interior Designing <br>Ideas.",
+				"cardData": "22 December,2022"
+			},
+			{
+				"cardImagePath": "./img/blog/blog_img3.png",
+				"cardImageAlt": "news-card-3",
+				"cardHeader": "Best For Any Office & Business Interior <br>Solution",
+				"cardData": "25 December,2022"
+			},
+			{
+				"cardImagePath": "./img/blog/blog_img4.png",
+				"cardImageAlt": "news-card-4",
+				"cardHeader": "Let’s Get Solution For Building Construction <br>Work",
+				"cardData": "26 December,2022"
+			},
+			{
+				"cardImagePath": "./img/blog/blog_img5.png",
+				"cardImageAlt": "news-card-5",
+				"cardHeader": "Low Cost Latest Invented Interior Designing <br>Ideas.",
+				"cardData": "22 December,2022"
+			},
+			{
+				"cardImagePath": "./img/blog/blog_img6.png",
+				"cardImageAlt": "news-card-6",
+				"cardHeader": "Best For Any Office & Business Interior <br>Solution",
+				"cardData": "25 December,2022"
+			}
+		]}

@@ -1,4 +1,4 @@
-/* import impCards from './card.json' assert { type: 'json' };
+import impCards from '../card.json' assert { type: 'json' };
 
 new Vue({
 	el: '#cards',
@@ -10,4 +10,4 @@ new Vue({
 		this.cards = impCards.cards;
 		console.log('this.cards: ', this.cards);
 	},
-}); */
+});

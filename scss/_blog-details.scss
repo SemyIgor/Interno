@@ -1,0 +1,227 @@
+.blog-details-face {
+   height: 351px;
+   width: 100%;
+   // display: flex;
+   // flex-direction: column;
+   // align-items: center;
+   // justify-content: flex-end;
+   background-color: #F4F0EC;
+   background-image: url('../img/blog-details/blog-details-face.jpg');
+   background-size: cover;
+   background-position: center;
+
+   // &__content {
+   //    display: flex;
+   //    flex-direction: column;
+   //    align-items: center;
+   //    justify-content: center;
+   //    margin: 0 auto;
+   //    max-width: 1200px;
+   // }
+}
+
+.details {
+   &__main {
+      background-color: #fff;
+      padding-top: 200px;
+      padding-bottom: 96px;
+   }
+
+   &__content {
+      margin: 0 auto;
+      max-width: 1200px;
+      display: flex;
+      gap: 52px;
+
+   }
+
+   &__blogs {
+      width: 66.667%;
+   }
+
+   &__blogs p {
+      color: #4D5053;
+      font-size: 22px;
+      line-height: 1.50;
+      letter-spacing: 0.22px;
+
+      &+p {
+         margin-top: 40px;
+      }
+   }
+}
+
+.blogs {
+   &__ample {
+      width: 100%;
+   }
+
+   &__title {
+      margin-bottom: 21px;
+      color: #292F36;
+      font-family: 'DM Serif Display', serif;
+      font-size: 50px;
+      letter-spacing: 1px;
+   }
+
+   &__image {
+      margin-bottom: 46px;
+      border-radius: 50px;
+      background: #C4C4C4;
+      overflow: hidden;
+   }
+
+   &__image img {
+      width: 100%;
+   }
+
+   &-date-crumbles {
+      @extend %flexRowBetween;
+      margin-bottom: 48px;
+
+   }
+
+   &__date {
+      color: #4D5053;
+      font-size: 16px;
+      line-height: 1.50;
+      letter-spacing: 0.16px;
+   }
+
+   &__crumbles {
+      margin-right: 67px;
+      color: #4D5053;
+      font-size: 16px;
+      line-height: 1.50;
+      letter-spacing: 0.16px;
+   }
+
+   &__quote {
+      margin-top: 35px;
+      margin-bottom: 27px;
+      max-width: 800px;
+      padding-bottom: 53px;
+      border-radius: 50px;
+      background: #F4F0EC;
+
+      & p {
+         color: #CDA274;
+         margin-left: 0;
+         margin-right: 0;
+         text-align: center;
+         font-family: 'DM Serif Display', serif;
+         font-size: 25px;
+         font-style: italic;
+         line-height: 1.25;
+         // line-height: 100px;
+         letter-spacing: 0.5px;
+
+         &:first-child {
+            // transform: rotate(-180deg);
+            // transform-origin: 50% 50%;
+            margin-bottom: 60px;
+            color: #CDA274;
+            text-align: center;
+            font-family: 'DM Serif Display', serif;
+            font-size: 200px;
+            font-style: italic;
+            font-weight: 400;
+            // line-height: 1.25;
+            line-height: 100px;
+            letter-spacing: -10px;
+         }
+      }
+   }
+}
+
+.short {
+   &__title {
+      margin-bottom: 20px;
+      color: #292F36;
+      font-family: 'DM Serif Display', serif;
+      font-size: 50px;
+      line-height: 1.25;
+      letter-spacing: 1px;
+   }
+
+   &__text {
+      &_start {
+         margin-bottom: 24px;
+         color: #4D5053;
+         font-size: 22px;
+         line-height: 1.50;
+         letter-spacing: 0.22px;
+      }
+
+      &_end {
+         color: #4D5053;
+         font-size: 22px;
+         line-height: 150%;
+         letter-spacing: 0.22px;
+      }
+   }
+
+   &__blogs {
+      margin-bottom: 44px;
+   }
+
+   &__blog {
+      color: #4D5053;
+      font-size: 22px;
+      line-height: 1.50;
+      letter-spacing: 0.22px;
+
+      &:not(:last-child) {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__image {
+      margin-bottom: 35px;
+      border-radius: 50px;
+      background: #C4C4C4;
+      overflow: hidden;
+   }
+}
+
+.tags {
+   &__title {
+      margin-bottom: 24px;
+      color: #292F36;
+      font-family: 'DM Serif Display', serif;
+      font-size: 25px;
+      line-height: 1.25;
+      letter-spacing: 0.5px;
+   }
+
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+
+   &__item {
+      cursor: pointer;
+      padding: 9px 30px;
+
+      border-radius: 10px;
+      background: #F4F0EC;
+
+      color: #000;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: 0.36px;
+
+      &_active {
+         background: #292F36;
+
+         color: #FFF;
+         // text-align: center;
+         // font-size: 18px;
+         // line-height: 1.25;
+         // letter-spacing: 0.36px;
+      }
+   }
+
+}

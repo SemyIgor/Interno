@@ -15,133 +15,116 @@
 
 <body>
 
-   <header class="header">
-      <div class="header__content center">
+   <div class="outer-shell">
 
-         <div class="header__logo">
-            <a href="./index.html">
-               <img src="./img/home/logo.svg" alt="Logo-icon" class="header__logo_img">
-            </a>
-         </div>
+      <header class="header">
+         <div class="header__content center">
 
-         <nav class="header__nav">
-            <a href="./index.html" class="nav__item">Home</a>
-            <a href="#" class="nav__item">Project</a>
-            <a href="./blog.html" class="nav__item">Blog</a>
-         </nav>
-
-      </div>
-   </header>
-
-   <article class="blog-details-face">
-      <div class="blog-details-face__content">
-      </div>
-   </article>
-
-   <main class="details__main">
-      <div class="details__content">
-         <section class="details__blogs">
-            <article class="blogs__ample" id="ample">
-               <h2 class="blogs__title">Let’s Get Solution for Building
-                  Construction Work</h2>
-               <div class="blogs__image">
-                  <img src="./img/blog-details/blogs-ample1.png" alt="Main image kitchen">
-               </div>
-               <div class="blogs-date-crumbles">
-                  <span class="blogs__date">26 December,2022</span>
-                  <span class="blogs__crumbles">Interior / Home / Decore</span>
-               </div>
-               <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular
-                  belief.There are
-                  many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-                  some form, by
-                  injecthumour, or randomised words which don't look even slightly believable.</p>
-               <p>Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to
-                  repeat predefined
-                  chunks as necessary.</p>
-            </article>
-
-            <div class="blogs__quote">
-               <p>,,</p>
-               <!-- <p>“</p> -->
-               <p>The details are not the details.
-                  <br>They make the design.
-               </p>
+            <div class="header__logo">
+               <a href="./index.html">
+                  <img src="./img/home/logo.svg" alt="Logo-icon" class="header__logo_img">
+               </a>
             </div>
 
-            <div class="blogs__short">
-               <h2 class="short__title">Design sprints are great</h2>
-               <p class="short__text_start">
-                  Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular
-                  belief.There are
-                  many variations of passages of Lorem Ipsum available, but the majority have suffered.
-               </p>
-               <ol class="short__blogs">
-                  <li class="short__blog">
-                     Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the
-                     majority have
-                     suffered.</li>
-                  <li class="short__blog">Contrary to popular belief.There are many variations of passages of Lorem
-                     Ipsum available, but the
-                     majority have
-                     suffered.</li>
-                  <li class="short__blog">Contrary to popular belief.There are many variations of passages of Lorem
-                     Ipsum available, but the
-                     majority have
-                     suffered.</li>
-               </ol>
-               <div class="short__image">
-                  <img src="./img/blog-details/blogs-short.png" alt="Photo">
-               </div>
-               <p class="short__text_end">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
-                  turpmaximus.posuere in.Contrary to popular
-                  belief.There are
-                  many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
-            </div>
-         </section>
-
-         <section class="details__tags">
-            <h3 class="tags__title">Tags</h3>
-            <div class="tags__items">
-               <div class="tags__item tags__item_active">Kitchen</div>
-               <div class="tags__item">Bedroom</div>
-               <div class="tags__item">Building</div>
-               <div class="tags__item">Architecture</div>
-               <div class="tags__item">Kitchen Planning</div>
-            </div>
-         </section>
-
-      </div>
-   </main>
-
-   <footer class="footer">
-      <div class="footer__content">
-         <div class="footer__logo">
-            <a href="./index.html">
-               <img src="./img/home/logo.svg" alt="Logo-icon" class="header__logo_img">
-            </a>
-            <p>It is a long established fact that a reader will be distracted lookings.</p>
-            <div class="footer__socials">
-               <img class="footer__icon" src="./img/home/twitter .svg" alt="Twitter Icon">
-               <img class="footer__icon" src="./img/home/linkedin.svg" alt="Linked In Icon">
-            </div>
-         </div>
-         <nav class="footer__nav">
-            <h3 class="footer__subheader">Pages</h3>
-            <a href="./index.html" class="nav__item">Home</a>
-            <a href="#" class="nav__item">Project</a>
-            <a href="./blog.html" class="nav__item">Blog</a>
-         </nav>
-         <div class="footer__contact">
-            <h3 class="footer__subheader contact">Contact</h3>
-            <p class="address">55 East Birchwood Ave. Brooklyn, New York 11201</p>
-            <p class="email">contact@interno.com</p>
-            <p class="phone">(123) 456 - 7890</p>
+            <nav class="header__nav">
+               <a href="./index.html" class="nav__item">Home</a>
+               <a href="#" class="nav__item">Project</a>
+               <a href="./blog.html" class="nav__item">Blog</a>
+            </nav>
 
          </div>
-      </div>
-   </footer>
+      </header>
 
+      <article class="blog-details-face">
+         <div class="blog-details-face__content">
+         </div>
+      </article>
+
+      <main class="details__main">
+         <div class="details__content">
+            <section class="details__blogs" id="ample">
+               <blog-details v-bind:ample="blogs"></blog-details>
+
+               <div class="blogs__quote">
+                  <p>,,</p>
+                  <!-- <p>“</p> -->
+                  <p>The details are not the details.
+                     <br>They make the design.
+                  </p>
+               </div>
+
+               <div class="blogs__short">
+                  <h2 class="short__title">Design sprints are great</h2>
+                  <p class="short__text_start">
+                     Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to
+                     popular
+                     belief.There are
+                     many variations of passages of Lorem Ipsum available, but the majority have suffered.
+                  </p>
+                  <ol class="short__blogs">
+                     <li class="short__blog">
+                        Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but
+                        the
+                        majority have
+                        suffered.</li>
+                     <li class="short__blog">Contrary to popular belief.There are many variations of passages of Lorem
+                        Ipsum available, but the
+                        majority have
+                        suffered.</li>
+                     <li class="short__blog">Contrary to popular belief.There are many variations of passages of Lorem
+                        Ipsum available, but the
+                        majority have
+                        suffered.</li>
+                  </ol>
+                  <div class="short__image">
+                     <img src="./img/blog-details/blogs-short.png" alt="Photo">
+                  </div>
+                  <p class="short__text_end">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+                     turpmaximus.posuere in.Contrary to popular
+                     belief.There are
+                     many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+               </div>
+            </section>
+
+            <section class="details__tags">
+               <h3 class="tags__title">Tags</h3>
+               <div class="tags__items" id="maintags">
+                  <tags-menu v-for="item in tagsArray" v-bind:tags="item" v-bind:key="item.id"
+                     v-bind:class="item.activated" @click=""></tags-menu>
+               </div>
+            </section>
+
+         </div>
+      </main>
+
+      <footer class="footer">
+         <div class="footer__content">
+            <div class="footer__logo">
+               <a href="./index.html">
+                  <img src="./img/home/logo.svg" alt="Logo-icon" class="header__logo_img">
+               </a>
+               <p>It is a long established fact that a reader will be distracted lookings.</p>
+               <div class="footer__socials">
+                  <img class="footer__icon" src="./img/home/twitter .svg" alt="Twitter Icon">
+                  <img class="footer__icon" src="./img/home/linkedin.svg" alt="Linked In Icon">
+               </div>
+            </div>
+            <nav class="footer__nav">
+               <h3 class="footer__subheader">Pages</h3>
+               <a href="./index.html" class="nav__item">Home</a>
+               <a href="#" class="nav__item">Project</a>
+               <a href="./blog.html" class="nav__item">Blog</a>
+            </nav>
+            <div class="footer__contact">
+               <h3 class="footer__subheader contact">Contact</h3>
+               <p class="address">55 East Birchwood Ave. Brooklyn, New York 11201</p>
+               <p class="email">contact@interno.com</p>
+               <p class="phone">(123) 456 - 7890</p>
+
+            </div>
+         </div>
+      </footer>
+   </div>
 
    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
    <script type="module" src="./modules/blogdetails.js"></script>

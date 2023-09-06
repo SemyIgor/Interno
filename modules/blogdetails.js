@@ -1,10 +1,56 @@
 Vue.component('blog-details', {
 	props: ['ample'],
 	template: `
+	<article class="blogs__ample">
+	<h2 class="blogs__title">{{ample[0].header}}</h2>
+	<div class="blogs__image">
+		<img :src=ample[0].image :alt=ample[0].alt>
+	</div>
+	<div class="blogs-date-crumbles">
+	<span class="blogs__date">{{ample[0].date}}</span>
+	<span class="blogs__crumbles">Interior / Home / Decore</span>
+</div>
+<p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to
+	popular
+	belief.There are
+	many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+	some form, by
+	injecthumour, or randomised words which don't look even slightly believable.</p>
+	<p>Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to
+	repeat predefined
+	chunks as necessary.</p>
+	</article>
    `,
 });
 
-new Vue({
+Vue.component('tags-menu', {
+	props: ['tags'],
+	data() {
+		return {};
+	},
+	methods: {
+		activate() {},
+	},
+	template: `
+      <div class="tags__item">{{tags.name}}</div>
+   `,
+});
+
+const app4 = new Vue({
+	el: '#maintags',
+	data: {
+		tagsArray: [
+			{ id: 1, name: 'Kitchen', activated: '' },
+			{ id: 2, name: 'Bedroom', activated: 'tags__item_active' },
+			{ id: 3, name: 'Building', activated: '' },
+			{ id: 4, name: 'Architecture', activated: '' },
+			{ id: 5, name: 'Kitchen Planning', activated: '' },
+		],
+	},
+	methods: {},
+});
+
+const app1 = new Vue({
 	el: '#ample',
 	data: {
 		blogs: [

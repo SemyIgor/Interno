@@ -266,7 +266,7 @@
   height: 351px;
   width: 100%;
   background-color: #F4F0EC;
-  background-image: url("../img/blog-details/blog-details-face.jpg");
+  background-image: url("./img/blog-details/blog-details-face.jpg");
   background-size: cover;
   background-position: center;
 }

@@ -39,7 +39,7 @@ Vue.component('tags-menu', {
 Vue.component('blog', {
 	props: ['short'],
 	template: `
-	<li class="short__blog">{{short.header}}</li>
+	<li class="short__blog"><a href="#">{{short.header}}</a></li>
 	`,
 });
 

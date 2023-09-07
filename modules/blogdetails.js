@@ -77,7 +77,7 @@ const app1 = new Vue({
 			{
 				id: '002',
 				header:
-					"Blog #2. Beautiful Bedroom Ideas from the World's Top Designers",
+					'Blog #2. Beautiful Bedroom Ideas from the Worlds Top Designers',
 				image:
 					'https://www.thespruce.com/thmb/vf_MEDifLRzzmQNjMyUDR1FGA14=/3000x0/filters:no_upscale():max_bytes(150000):strip_icc()/tips-for-decorating-a-beautiful-bedroom-1976169-hero-e960fbb8311c4b9b875a1813962d34eb.jpg',
 				alt: 'Bedroom Image',

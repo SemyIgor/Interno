@@ -41,8 +41,8 @@
       </article>
 
       <main class="details__main">
-         <div class="details__content">
-            <section class="details__blogs" id="ample">
+         <div class="details__content" id="ample">
+            <section class="details__blogs">
                <blog-details v-bind:ample="blogs"></blog-details>
 
                <div class="blogs__quote">
@@ -62,19 +62,7 @@
                      many variations of passages of Lorem Ipsum available, but the majority have suffered.
                   </p>
                   <ol class="short__blogs">
-                     <li class="short__blog">
-                        Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but
-                        the
-                        majority have
-                        suffered.</li>
-                     <li class="short__blog">Contrary to popular belief.There are many variations of passages of Lorem
-                        Ipsum available, but the
-                        majority have
-                        suffered.</li>
-                     <li class="short__blog">Contrary to popular belief.There are many variations of passages of Lorem
-                        Ipsum available, but the
-                        majority have
-                        suffered.</li>
+                     <blog v-for="blog in blogs" v-bind:short="blog" v-bind:key="blog.id"></blog>
                   </ol>
                   <div class="short__image">
                      <img src="./img/blog-details/blogs-short.png" alt="Photo">

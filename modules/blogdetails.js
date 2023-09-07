@@ -43,19 +43,7 @@ Vue.component('blog', {
 	`,
 });
 
-const app4 = new Vue({
-	el: '#maintags',
-	data: {
-		tagsArray: [
-			{ id: 1, name: 'Kitchen', activated: '' },
-			{ id: 2, name: 'Bedroom', activated: 'tags__item_active' },
-			{ id: 3, name: 'Building', activated: '' },
-			{ id: 4, name: 'Architecture', activated: '' },
-			{ id: 5, name: 'Kitchen Planning', activated: '' },
-		],
-	},
-	methods: {},
-});
+Vue.component('blogs-list', {});
 
 const app1 = new Vue({
 	el: '#ample',
@@ -130,6 +118,13 @@ const app1 = new Vue({
 					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde voluptatibus, eaque qui deleniti tempora rem veritatis mollitia.',
 				tag: 'Building',
 			},
+		],
+		tagsArray: [
+			{ id: 1, name: 'Kitchen', activated: '' },
+			{ id: 2, name: 'Bedroom', activated: 'tags__item_active' },
+			{ id: 3, name: 'Building', activated: '' },
+			{ id: 4, name: 'Architecture', activated: '' },
+			{ id: 5, name: 'Kitchen Planning', activated: '' },
 		],
 	},
 });

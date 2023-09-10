@@ -43,6 +43,7 @@
       <main class="details__main">
          <div class="details__content" id="ample">
             <section class="details__blogs">
+               <!-- Should show the first blog of the filtered list -->
                <blog-details v-bind:ample="blogs"></blog-details>
 
                <div class="blogs__quote">
@@ -61,6 +62,7 @@
                      belief.There are
                      many variations of passages of Lorem Ipsum available, but the majority have suffered.
                   </p>
+                  <!-- Should be filtered -->
                   <ol class="short__blogs">
                      <blog v-for="blog in blogs" v-bind:short="blog" v-bind:key="blog.id"></blog>
                   </ol>
@@ -76,9 +78,12 @@
 
             <section class="details__tags">
                <h3 class="tags__title">Tags</h3>
+               <!-- Should trace the choice -->
                <div class="tags__items" id="maintags">
+
                   <tags-menu v-for="item in tagsArray" v-bind:tags="item" v-bind:key="item.id"
-                     v-bind:class="item.activated" @click=""></tags-menu>
+                     v-bind:class="item.activated" @activate-it="chooseTag(item.id)"></tags-menu>
+
                </div>
             </section>
 

@@ -23,19 +23,6 @@ Vue.component('blog-details', {
    `,
 });
 
-Vue.component('tags-menu', {
-	props: ['tags'],
-	data() {
-		return {};
-	},
-	methods: {
-		activate() {},
-	},
-	template: `
-	<div class="tags__item">{{tags.name}}</div>
-   `,
-});
-
 Vue.component('blog', {
 	props: ['short'],
 	template: `
@@ -44,6 +31,21 @@ Vue.component('blog', {
 });
 
 Vue.component('blogs-list', {});
+
+Vue.component('tags-menu', {
+	props: ['tags'],
+	data() {
+		return {};
+	},
+	methods: {
+		activate() {
+			this.$emit('activate-it', this.tags.id);
+		},
+	},
+	template: `
+	<div class="tags__item" @click="activate">{{tags.name}}</div>
+   `,
+});
 
 const app1 = new Vue({
 	el: '#ample',
@@ -121,10 +123,19 @@ const app1 = new Vue({
 		],
 		tagsArray: [
 			{ id: 1, name: 'Kitchen', activated: '' },
-			{ id: 2, name: 'Bedroom', activated: 'tags__item_active' },
+			{ id: 2, name: 'Bedroom', activated: '' },
 			{ id: 3, name: 'Building', activated: '' },
 			{ id: 4, name: 'Architecture', activated: '' },
 			{ id: 5, name: 'Kitchen Planning', activated: '' },
 		],
+	},
+	methods: {
+		chooseTag(id) {
+			this.tagsArray.forEach((element) => {
+				element.activated = '';
+			});
+			this.tagsArray[id - 1].activated = 'tags__item_active';
+			console.log('Clicked the Tag-' + id);
+		},
 	},
 });

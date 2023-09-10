@@ -383,6 +383,7 @@
   letter-spacing: 0.22px;
 }
 .short__blogs {
+  list-style-position: inside;
   margin-bottom: 44px;
 }
 .short__blog {

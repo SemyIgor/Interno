@@ -133,24 +133,24 @@ const app1 = new Vue({
 			},
 		],
 		tagsArray: [
-			{ id: 1, name: 'Kitchen', activated: 'tags__item_active' },
+			{ id: 1, name: 'Kitchen', activated: '' },
 			{ id: 2, name: 'Bedroom', activated: '' },
 			{ id: 3, name: 'Building', activated: '' },
 			{ id: 4, name: 'Architecture', activated: '' },
 			{ id: 5, name: 'Kitchen Planning', activated: '' },
 		],
-		tagsIndex: 1,
+		tagsIndex: 0,
 	},
 	computed: {
 		filteredBlogs() {
-			console.log(this.tagsIndex);
-			console.log(this.tagsArray[this.tagsIndex - 1].name);
-
-			const arr = this.blogs.filter(
-				(blog) => blog.tag == this.tagsArray[this.tagsIndex - 1].name
-			);
-			console.log('arr: ', arr);
-
+			let arr = [];
+			if (!this.tagsIndex) {
+				arr = this.blogs.filter((blog) => true);
+			} else {
+				arr = this.blogs.filter(
+					(blog) => blog.tag == this.tagsArray[this.tagsIndex - 1].name
+				);
+			}
 			return arr;
 		},
 	},
@@ -159,8 +159,15 @@ const app1 = new Vue({
 			this.tagsArray.forEach((element) => {
 				element.activated = '';
 			});
-			this.tagsArray[id - 1].activated = 'tags__item_active';
-			this.tagsIndex = id;
+			// Если индекс тегов равен 0, то покажем весь список
+			// Нажатие на уже выбранный тег обнуляет его
+			if (!this.tagsIndex) {
+				this.tagsArray[id - 1].activated = 'tags__item_active';
+				this.tagsIndex = id;
+			} else {
+				this.tagsArray[id - 1].activated = '';
+				this.tagsIndex = 0;
+			}
 		},
 	},
 });

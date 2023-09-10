@@ -44,7 +44,7 @@
          <div class="details__content" id="ample">
             <section class="details__blogs">
                <!-- Should show the first blog of the filtered list -->
-               <blog-details v-bind:ample="blogs"></blog-details>
+               <blog-details v-bind:ample="filteredBlogs"></blog-details>
 
                <div class="blogs__quote">
                   <p>,,</p>
@@ -64,7 +64,7 @@
                   </p>
                   <!-- Should be filtered -->
                   <ol class="short__blogs">
-                     <blog v-for="blog in blogs" v-bind:short="blog" v-bind:key="blog.id"></blog>
+                     <blog v-for="blog in filteredBlogs" v-bind:short="blog" v-bind:key="blog.id"></blog>
                   </ol>
                   <div class="short__image">
                      <img src="./img/blog-details/blogs-short.png" alt="Photo">
@@ -74,6 +74,7 @@
                      belief.There are
                      many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
                </div>
+               <!-- <p>{{filteredBlogs}}</p> -->
             </section>
 
             <section class="details__tags">

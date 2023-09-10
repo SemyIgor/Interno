@@ -34,9 +34,6 @@ Vue.component('blogs-list', {});
 
 Vue.component('tags-menu', {
 	props: ['tags'],
-	data() {
-		return {};
-	},
 	methods: {
 		activate() {
 			this.$emit('activate-it', this.tags.id);
@@ -109,7 +106,21 @@ const app1 = new Vue({
 			{
 				id: '005',
 				header:
-					'Blog #5. Skilled Existing Company Modification Commercial Kitchen Planning And Designing, Pan India',
+					'Blog #5. Remarkable Buildings That Use Trees as a Design Element',
+				image:
+					'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.architecturaldigest.com%2Fstory%2F5-remarkable-buildings-that-use-trees-as-design-element&psig=AOvVaw0iF7Fz00U7G6iREAiCWVxg&ust=1694455652120000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwjNrJCr0aCBAxXDGhAIHVA3CwkQjRx6BAgAEAw',
+				alt: 'Building Image',
+				date: '25 October,2023',
+				text1:
+					'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, incidunt et? Assumenda adipisci iure, veniam beatae vero rem unde quod ex sed natus sapiente. Iure, et ad voluptatem nihil sequi itaque. Magni debitis suscipit placeat aut? Ipsa maxime tempora expedita ea optio nostrum sequi.',
+				text2:
+					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde voluptatibus, eaque qui deleniti tempora rem veritatis mollitia.',
+				tag: 'Building',
+			},
+			{
+				id: '006',
+				header:
+					'Blog #6. Skilled Existing Company Modification Commercial Kitchen Planning And Designing, Pan India',
 				image:
 					'https://www.grundig.com/ktchnmag/wp-content/uploads/2017/03/GRUNDIG-KTCHN-MAG_What-Is-Kitchen-Design-1_Unsplash.jpg',
 				alt: 'Kitchen Planning Image',
@@ -118,16 +129,30 @@ const app1 = new Vue({
 					'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, incidunt et? Assumenda adipisci iure, veniam beatae vero rem unde quod ex sed natus sapiente. Iure, et ad voluptatem nihil sequi itaque. Magni debitis suscipit placeat aut? Ipsa maxime tempora expedita ea optio nostrum sequi.',
 				text2:
 					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde voluptatibus, eaque qui deleniti tempora rem veritatis mollitia.',
-				tag: 'Building',
+				tag: 'Kitchen Planning',
 			},
 		],
 		tagsArray: [
-			{ id: 1, name: 'Kitchen', activated: '' },
+			{ id: 1, name: 'Kitchen', activated: 'tags__item_active' },
 			{ id: 2, name: 'Bedroom', activated: '' },
 			{ id: 3, name: 'Building', activated: '' },
 			{ id: 4, name: 'Architecture', activated: '' },
 			{ id: 5, name: 'Kitchen Planning', activated: '' },
 		],
+		tagsIndex: 1,
+	},
+	computed: {
+		filteredBlogs() {
+			console.log(this.tagsIndex);
+			console.log(this.tagsArray[this.tagsIndex - 1].name);
+
+			const arr = this.blogs.filter(
+				(blog) => blog.tag == this.tagsArray[this.tagsIndex - 1].name
+			);
+			console.log('arr: ', arr);
+
+			return arr;
+		},
 	},
 	methods: {
 		chooseTag(id) {
@@ -135,7 +160,7 @@ const app1 = new Vue({
 				element.activated = '';
 			});
 			this.tagsArray[id - 1].activated = 'tags__item_active';
-			console.log('Clicked the Tag-' + id);
+			this.tagsIndex = id;
 		},
 	},
 });

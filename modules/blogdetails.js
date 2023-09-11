@@ -153,20 +153,24 @@ const app1 = new Vue({
 			}
 			return arr;
 		},
+		cloneTagsArray() {
+			const arr = Object.assign([], this.tagsArray);
+			return arr;
+		},
 	},
 	methods: {
 		chooseTag(id) {
+			// Обнуляем активность кнопок выбора тегов
 			this.tagsArray.forEach((element) => {
 				element.activated = '';
 			});
-			// Если индекс тегов равен 0, то покажем весь список
-			// Нажатие на уже выбранный тег обнуляет его
-			if (!this.tagsIndex) {
-				this.tagsArray[id - 1].activated = 'tags__item_active';
-				this.tagsIndex = id;
-			} else {
-				this.tagsArray[id - 1].activated = '';
+			// Если нажали на уже выбранный тег
+			if (this.tagsIndex == id) {
 				this.tagsIndex = 0;
+				// Если нажали на невыбранный тег
+			} else {
+				this.tagsIndex = id;
+				this.tagsArray[id - 1].activated = 'tags__item_active';
 			}
 		},
 	},

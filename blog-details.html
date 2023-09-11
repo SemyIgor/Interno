@@ -69,12 +69,12 @@
                   <div class="short__image">
                      <img src="./img/blog-details/blogs-short.png" alt="Photo">
                   </div>
-                  <p class="short__text_end">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
-                     turpmaximus.posuere in.Contrary to popular
-                     belief.There are
-                     many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+                  <p class="short__text_end">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ab voluptate sint. Veniam earum
+                     obcaecati maxime, officia expedita soluta corrupti quisquam aliquid. Esse deserunt delectus,
+                     mollitia voluptates earum iste eum dolores nam quam, commodi ducimus.
+                  </p>
                </div>
-               <!-- <p>{{filteredBlogs}}</p> -->
             </section>
 
             <section class="details__tags">
@@ -82,8 +82,11 @@
                <!-- Should trace the choice -->
                <div class="tags__items" id="maintags">
 
+                  <tags-menu v-for="item in cloneTagsArray" v-bind:tags="item" v-bind:key="item.id"
+                     @activate-it="chooseTag(item.id)" v-bind:class="item.activated"></tags-menu>
+                  <!-- 
                   <tags-menu v-for="item in tagsArray" v-bind:tags="item" v-bind:key="item.id"
-                     v-bind:class="item.activated" @activate-it="chooseTag(item.id)"></tags-menu>
+                     @activate-it="chooseTag(item.id)" v-bind:class="item.activated"></tags-menu> -->
 
                </div>
             </section>

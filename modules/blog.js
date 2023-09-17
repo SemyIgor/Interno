@@ -1,4 +1,5 @@
 import impCards from '../card.json' assert { type: 'json' };
+// Vue.component()
 
 new Vue({
 	el: '#cards',

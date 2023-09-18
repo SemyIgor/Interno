@@ -16,22 +16,8 @@
 <body>
    <div class="outer-shell">
 
-      <header class="header">
-         <div class="header__content center">
-
-            <div class="header__logo">
-               <a href="./index.html">
-                  <img src="./img/home/logo.svg" alt="Logo-icon" class="header__logo_img">
-               </a>
-            </div>
-
-            <nav class="header__nav">
-               <a href="./index.html" class="nav__item">Home</a>
-               <a href="#" class="nav__item">Project</a>
-               <a href="./blog.html" class="nav__item">Blog</a>
-            </nav>
-
-         </div>
+      <header id="header" class="header">
+         <header-content :navdata="navData"></header-content>
       </header>
 
       <article class="blog-face">
@@ -78,32 +64,11 @@
       </section>
 
       <section class="news">
-         <div class="blog-news__content">
+         <div id="blog-news__content" class="blog-news__content">
             <h2 class="blog-news__title">Articles & News</h2>
-            <div id="cards" class="blog-news__cards">
 
-               <div v-for="(card, index) in cards" :key="index" class="blog-news__card">
-                  <img :src="card.cardImagePath" alt="cardImageAlt" class="news__image news__image1">
-                  <div class="news__info">
-                     <div class="news__text">
-                        <div class="news__header" v-html="card.cardHeader"></div>
-                     </div>
-                     <div class="news__data-arrow">
-                        <div class="news__data">{{card.cardData}}</div>
-                        <div class="news__arrow">
-                           <a href="./blog-details.html">
-                              <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                                 <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                              </svg>
-                           </a>
-                        </div>
+            <blog-news-card :cards="cards"></blog-news-card>
 
-                     </div>
-                  </div>
-               </div>
-            </div>
             <div class="blog-news__pagination">
                <div class="blog-news__pagiNumber">
                   1
@@ -122,35 +87,10 @@
                   </svg>
                </div>
             </div>
-
       </section>
 
-      <footer class="footer">
-         <div class="footer__content">
-            <div class="footer__logo">
-               <a href="./index.html">
-                  <img src="./img/home/logo.svg" alt="Logo-icon" class="header__logo_img">
-               </a>
-               <p>It is a long established fact that a reader will be distracted lookings.</p>
-               <div class="footer__socials">
-                  <img class="footer__icon" src="./img/home/twitter .svg" alt="Twitter Icon">
-                  <img class="footer__icon" src="./img/home/linkedin.svg" alt="Linked In Icon">
-               </div>
-            </div>
-            <nav class="footer__nav">
-               <h3 class="footer__subheader">Pages</h3>
-               <a href="./index.html" class="nav__item">Home</a>
-               <a href="#" class="nav__item">Project</a>
-               <a href="./blog.html" class="nav__item">Blog</a>
-            </nav>
-            <div class="footer__contact">
-               <h3 class="footer__subheader contact">Contact</h3>
-               <p class="address">55 East Birchwood Ave. Brooklyn, New York 11201</p>
-               <p class="email">contact@interno.com</p>
-               <p class="phone">(123) 456 - 7890</p>
-
-            </div>
-         </div>
+      <footer id="footer" class="footer">
+         <footer-content :navdata="navData" :footercontact="footerContact" :footerlogo="footerLogo"></footer-content>
       </footer>
 
    </div>

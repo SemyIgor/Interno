@@ -16,22 +16,8 @@
 <body>
    <div class="outer-shell">
 
-      <header class="header">
-         <div class="header__content center">
-
-            <div class="header__logo">
-               <a href="./index.html">
-                  <img src="./img/home/logo.svg" alt="Logo-icon" class="header__logo_img">
-               </a>
-            </div>
-
-            <nav class="header__nav">
-               <a href="./index.html" class="nav__item">Home</a>
-               <a href="#" class="nav__item">Project</a>
-               <a href="./blog.html" class="nav__item">Blog</a>
-            </nav>
-
-         </div>
+      <header id="header" class="header">
+         <header-content :navdata="navData"></header-content>
       </header>
 
       <article class="blog-details-face">
@@ -93,33 +79,10 @@
          </div>
       </main>
 
-      <footer class="footer">
-         <div class="footer__content">
-            <div class="footer__logo">
-               <a href="./index.html">
-                  <img src="./img/home/logo.svg" alt="Logo-icon" class="header__logo_img">
-               </a>
-               <p>It is a long established fact that a reader will be distracted lookings.</p>
-               <div class="footer__socials">
-                  <img class="footer__icon" src="./img/home/twitter .svg" alt="Twitter Icon">
-                  <img class="footer__icon" src="./img/home/linkedin.svg" alt="Linked In Icon">
-               </div>
-            </div>
-            <nav class="footer__nav">
-               <h3 class="footer__subheader">Pages</h3>
-               <a href="./index.html" class="nav__item">Home</a>
-               <a href="#" class="nav__item">Project</a>
-               <a href="./blog.html" class="nav__item">Blog</a>
-            </nav>
-            <div class="footer__contact">
-               <h3 class="footer__subheader contact">Contact</h3>
-               <p class="address">55 East Birchwood Ave. Brooklyn, New York 11201</p>
-               <p class="email">contact@interno.com</p>
-               <p class="phone">(123) 456 - 7890</p>
-
-            </div>
-         </div>
+      <footer id="footer" class="footer">
+         <footer-content :navdata="navData" :footercontact="footerContact" :footerlogo="footerLogo"></footer-content>
       </footer>
+
    </div>
 
    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

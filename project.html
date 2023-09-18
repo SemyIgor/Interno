@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Interno</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="./normalize.css">
+   <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+   <div class="outer-shell">
+
+      <header id="header" class="header">
+         <header-content :navdata="navData"></header-content>
+      </header>
+
+      <article id="project-face" class="project-face">
+         <project-face-content :projfacetab="projFaceTab">
+         </project-face-content>
+      </article>
+
+      <div class="blog-news__pagination">
+         <div class="blog-news__pagiNumber">
+            01
+         </div>
+         <div class="blog-news__pagiNumber">
+            02
+         </div>
+         <div class="blog-news__pagiNumber">
+            03
+         </div>
+         <div class="blog-news__pagiNumber">
+            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52" fill="none">
+               <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
+               <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+         </div>
+      </div>
+
+      <footer id="footer" class="footer">
+         <footer-content :navdata="navData" :footercontact="footerContact" :footerlogo="footerLogo"></footer-content>
+      </footer>
+
+   </div>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+   <script type="module" src="./modules/project.js"></script>
+</body>
+
+</html>

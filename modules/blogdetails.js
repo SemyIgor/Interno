@@ -31,7 +31,7 @@ Vue.component('footer-content', {
 	<div class="footer__content">
 		<div class="footer__logo">
 			<a :href="footerlogo[0].logoHref">
-				<img :src="footerlogo[1].logoSrc" :alt="Logo-icon" class="header__logo_img">
+				<img :src="footerlogo[1].logoSrc" alt="Logo-icon" class="header__logo_img">
 			</a>
 			<p>{{footerlogo[2].logoText}}</p>
 			<div class="footer__socials">
@@ -237,7 +237,7 @@ const header = new Vue({
 	data: {
 		navData: [
 			{ navHref: './index.html', navValue: 'Home' },
-			{ navHref: '#', navValue: 'Project' },
+			{ navHref: './project.html', navValue: 'Project' },
 			{ navHref: './blog.html', navValue: 'Blog' },
 		],
 	},
@@ -252,7 +252,7 @@ const footer = new Vue({
 				{ subheader: 'Pages' },
 				[
 					{ navHref: './index.html', navValue: 'Home' },
-					{ navHref: '#', navValue: 'Project' },
+					{ navHref: './project.html', navValue: 'Project' },
 					{ navHref: './blog.html', navValue: 'Blog' },
 				],
 			],

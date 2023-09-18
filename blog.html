@@ -20,13 +20,9 @@
          <header-content :navdata="navData"></header-content>
       </header>
 
-      <article class="blog-face">
-         <div class="blog-face__content">
-            <div class="blog-face__tab">
-               <h2 class="blog-face__title">Articles & News</h2>
-               <p class="blog-face__anchor"><a href="./index.html">Home</a> / <a href="./blog.html">Blog</a></p>
-            </div>
-         </div>
+      <article id="blog-face" class="blog-face">
+         <blog-face-content :projfacetab="projFaceTab">
+         </blog-face-content>
       </article>
 
       <section class="post">

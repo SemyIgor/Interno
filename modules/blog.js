@@ -52,6 +52,21 @@ Vue.component('header-content', {
 	`,
 });
 
+Vue.component('blog-face-content', {
+	props: ['projfacetab'],
+	data() {
+		return {};
+	},
+	template: `
+	<div class="blog-face__content">
+		<div class="blog-face__tab">
+			<h2 class="blog-face__title">{{projfacetab[0].title}}</h2>
+			<p class="blog-face__anchor"><a :href="projfacetab[1][0].href">{{projfacetab[1][0].name}}</a> / <a :href="projfacetab[1][1].href">{{projfacetab[1][1].name}}</a></p>
+		</div>
+	</div>
+	`,
+});
+
 Vue.component('footer-content', {
 	props: ['navdata', 'footercontact', 'footerlogo'],
 	data() {
@@ -64,7 +79,7 @@ Vue.component('footer-content', {
 	<div class="footer__content">
 		<div class="footer__logo">
 			<a :href="footerlogo[0].logoHref">
-				<img :src="footerlogo[1].logoSrc" :alt="Logo-icon" class="header__logo_img">
+				<img :src="footerlogo[1].logoSrc" alt="Logo-icon" class="header__logo_img">
 			</a>
 			<p>{{footerlogo[2].logoText}}</p>
 			<div class="footer__socials">
@@ -104,11 +119,24 @@ const header = new Vue({
 	data: {
 		navData: [
 			{ navHref: './index.html', navValue: 'Home' },
-			{ navHref: '#', navValue: 'Project' },
+			{ navHref: './project.html', navValue: 'Project' },
 			{ navHref: './blog.html', navValue: 'Blog' },
 		],
 	},
 	methods: {},
+});
+
+const blogFace = new Vue({
+	el: '#blog-face',
+	data: {
+		projFaceTab: [
+			{ title: 'Articles & News' },
+			[
+				{ name: 'Home', href: './index.html' },
+				{ name: 'Blog', href: './blog.html' },
+			],
+		],
+	},
 });
 
 const footer = new Vue({
@@ -119,7 +147,7 @@ const footer = new Vue({
 				{ subheader: 'Pages' },
 				[
 					{ navHref: './index.html', navValue: 'Home' },
-					{ navHref: '#', navValue: 'Project' },
+					{ navHref: './project.html', navValue: 'Project' },
 					{ navHref: './blog.html', navValue: 'Blog' },
 				],
 			],

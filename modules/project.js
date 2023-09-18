@@ -19,6 +19,21 @@ Vue.component('header-content', {
 	`,
 });
 
+Vue.component('project-face-content', {
+	props: ['projfacetab'],
+	data() {
+		return {};
+	},
+	template: `
+	<div class="project-face__content">
+		<div class="project-face__tab">
+			<h2 class="project-face__title">{{projfacetab[0].title}}</h2>
+			<p class="project-face__anchor"><a :href="projfacetab[1][0].href">{{projfacetab[1][0].name}}</a> / <a :href="projfacetab[1][1].href">{{projfacetab[1][1].name}}</a></p>
+		</div>
+	</div>
+	`,
+});
+
 Vue.component('footer-content', {
 	props: ['navdata', 'footercontact', 'footerlogo'],
 	data() {
@@ -59,11 +74,24 @@ const header = new Vue({
 	data: {
 		navData: [
 			{ navHref: './index.html', navValue: 'Home' },
-			{ navHref: './project.html', navValue: 'Project' },
+			{ navHref: '#', navValue: 'Project' },
 			{ navHref: './blog.html', navValue: 'Blog' },
 		],
 	},
 	methods: {},
+});
+
+const projectFace = new Vue({
+	el: '#project-face',
+	data: {
+		projFaceTab: [
+			{ title: 'Our Project' },
+			[
+				{ name: 'Home', href: './index.html' },
+				{ name: 'Project', href: './project.html' },
+			],
+		],
+	},
 });
 
 const footer = new Vue({
@@ -74,7 +102,7 @@ const footer = new Vue({
 				{ subheader: 'Pages' },
 				[
 					{ navHref: './index.html', navValue: 'Home' },
-					{ navHref: './project.html', navValue: 'Project' },
+					{ navHref: '#', navValue: 'Project' },
 					{ navHref: './blog.html', navValue: 'Blog' },
 				],
 			],

@@ -1,3 +1,5 @@
+import impCards from '../json/project_card.json' assert { type: 'json' };
+
 Vue.component('header-content', {
 	props: ['navdata'],
 	data() {
@@ -33,6 +35,45 @@ Vue.component('project-face-content', {
 	</div>
 	`,
 });
+
+Vue.component('cards-module-card', {
+	props: ['cards'],
+	data() {
+		return {};
+	},
+	template: `
+		<div class="cards-module__cards">
+			<div v-for="(card, index) in cards" :key="index" class="cards-module__card">
+				<img :src="card.cardImagePath" alt="cardImageAlt" class="cards-module__image cards-module__image1">
+				<div class="cards-module__info">
+
+					<div class="cards-module__text">
+						<div class="cards-module__header" v-html="card.cardHeader">
+						</div>
+						
+						<div class="cards-module__subtext">	{{card.cardSubtext}}
+						</div>
+					</div>
+
+					<div class="cards-module__arrow">
+						<a href="./blog-details.html">
+							<svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="35" cy="35" r="35" fill="#F4F0EC" />
+								<path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	`,
+});
+
+{
+	/* <div class="cards-module__data-arrow"></div> */
+}
 
 Vue.component('footer-content', {
 	props: ['navdata', 'footercontact', 'footerlogo'],
@@ -91,6 +132,18 @@ const projectFace = new Vue({
 				{ name: 'Project', href: './project.html' },
 			],
 		],
+	},
+});
+
+const blogNews = new Vue({
+	el: '#cards-module__content',
+	data: {
+		cards: [],
+	},
+	methods: {},
+	beforeMount() {
+		this.cards = impCards.cards;
+		console.log('this.cards: ', this.cards);
 	},
 });
 

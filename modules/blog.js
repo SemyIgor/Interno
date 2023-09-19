@@ -1,4 +1,4 @@
-import impCards from '../card.json' assert { type: 'json' };
+import impCards from '../json/blog_card.json' assert { type: 'json' };
 
 Vue.component('blog-news-card', {
 	props: ['cards'],

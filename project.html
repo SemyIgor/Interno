@@ -26,24 +26,33 @@
          </project-face-content>
       </article>
 
-      <div class="blog-news__pagination">
-         <div class="blog-news__pagiNumber">
-            01
+      <section class="cards-module">
+         <div id="cards-module__content" class="cards-module__content">
+
+            <cards-module-card :cards="cards"></cards-module-card>
+
+            <div class="blog-news__pagination">
+               <div class="blog-news__pagiNumber">
+                  01
+               </div>
+               <div class="blog-news__pagiNumber">
+                  02
+               </div>
+               <div class="blog-news__pagiNumber">
+                  03
+               </div>
+               <div class="blog-news__pagiNumber">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52" fill="none">
+                     <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
+                     <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+               </div>
+            </div>
+
          </div>
-         <div class="blog-news__pagiNumber">
-            02
-         </div>
-         <div class="blog-news__pagiNumber">
-            03
-         </div>
-         <div class="blog-news__pagiNumber">
-            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52" fill="none">
-               <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
-               <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-         </div>
-      </div>
+
+      </section>
 
       <footer id="footer" class="footer">
          <footer-content :navdata="navData" :footercontact="footerContact" :footerlogo="footerLogo"></footer-content>

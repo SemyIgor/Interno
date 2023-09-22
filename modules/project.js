@@ -79,12 +79,7 @@ Vue.component('categories-module', {
 		};
 	},
 	computed: {},
-	methods: {
-		// activate(cat) {
-		// 	this.index = cat;
-		// 	this.$emit('activate-it', cat);
-		// },
-	},
+	methods: {},
 	template: `
 	<div class="categories">
 		<div v-for="category in categories" :key="category.id" class="categories__item"  @click="$emit('activate-it', category.id)" :class="category.activated">{{category.name}}</div>
@@ -165,7 +160,7 @@ const projectNews = new Vue({
 		tagsIndex: 0,
 	},
 	computed: {
-		// Фильтруем блоги согласно выбранному табу
+		// Фильтруем карточки согласно выбранному табу
 		filteredCards() {
 			let arr = [];
 			if (!this.tagsIndex) {
@@ -201,10 +196,6 @@ const projectNews = new Vue({
 				this.tagsIndex = id;
 				this.tagsArray[id - 1].activated = 'categories__item_active';
 			}
-		},
-		chooseTagi(idin) {
-			this.tagsIndex = idin;
-			console.log('chooseTagi', this.tagsIndex);
 		},
 	},
 	beforeMount() {

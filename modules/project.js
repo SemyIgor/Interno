@@ -71,9 +71,26 @@ Vue.component('cards-module-card', {
 	`,
 });
 
-{
-	/* <div class="cards-module__data-arrow"></div> */
-}
+Vue.component('categories-module', {
+	props: ['categories'],
+	data() {
+		return {
+			index: 0,
+		};
+	},
+	computed: {},
+	methods: {
+		// activate(cat) {
+		// 	this.index = cat;
+		// 	this.$emit('activate-it', cat);
+		// },
+	},
+	template: `
+	<div class="categories">
+		<div v-for="category in categories" :key="category.id" class="categories__item"  @click="$emit('activate-it', category.id)" :class="category.activated">{{category.name}}</div>
+	</div>
+	`,
+});
 
 Vue.component('footer-content', {
 	props: ['navdata', 'footercontact', 'footerlogo'],
@@ -135,15 +152,63 @@ const projectFace = new Vue({
 	},
 });
 
-const blogNews = new Vue({
+const projectNews = new Vue({
 	el: '#cards-module__content',
 	data: {
 		cards: [],
+		tagsArray: [
+			{ id: 1, name: 'Bathroom', activated: '' },
+			{ id: 2, name: 'Bed Room', activated: '' },
+			{ id: 3, name: 'Kitchen', activated: '' },
+			{ id: 4, name: 'Living Area', activated: '' },
+		],
+		tagsIndex: 0,
 	},
-	methods: {},
+	computed: {
+		// Фильтруем блоги согласно выбранному табу
+		filteredCards() {
+			let arr = [];
+			if (!this.tagsIndex) {
+				arr = this.cards.filter((card) => true);
+			} else {
+				arr = this.cards.filter(
+					(card) => card.category == this.tagsArray[this.tagsIndex - 1].name
+				);
+			}
+			return arr;
+		},
+		// Клонируем массив табов для того, чтобы не менять исходный массив при присвоении свойства =active=
+		cloneTagsArray() {
+			const arr = Object.assign([], this.tagsArray);
+			return arr;
+		},
+	},
+	methods: {
+		// 1. Выделяем цветом нажатый таб. 2. Меняем переменную индекса таба соответственно нажатию. 3. Изменяем у выбранного таба в массиве (не в клоне!) табов свойство =activated=
+		chooseTag(id) {
+			console.log('id: ', id);
+
+			// Обнуляем активность кнопок выбора табов
+			this.tagsArray.forEach((element) => {
+				console.log(element.activated, this.tagsIndex);
+				element.activated = '';
+			});
+			// Если нажали на уже выбранный таб
+			if (this.tagsIndex == id) {
+				this.tagsIndex = 0;
+				// Если нажали на невыбранный таб
+			} else {
+				this.tagsIndex = id;
+				this.tagsArray[id - 1].activated = 'categories__item_active';
+			}
+		},
+		chooseTagi(idin) {
+			this.tagsIndex = idin;
+			console.log('chooseTagi', this.tagsIndex);
+		},
+	},
 	beforeMount() {
 		this.cards = impCards.cards;
-		console.log('this.cards: ', this.cards);
 	},
 });
 

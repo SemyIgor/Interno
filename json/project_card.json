@@ -3,48 +3,224 @@
 				"cardImagePath": "./img/project/project_img1.png",
 				"cardImageAlt": "proj-card-1",
 				"cardHeader": "Minimal Bedroom",
-				"cardSubtext": "Decor / Artchitecture"
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bed Room"
 			},
 			{
 				"cardImagePath": "./img/project/project_img2.png",
 				"cardImageAlt": "proj-card-2",
 				"cardHeader": "Minimal Bedroom",
-				"cardSubtext": "Decor / Artchitecture"
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bed Room"
 			},
 			{
 				"cardImagePath": "./img/project/project_img3.png",
 				"cardImageAlt": "proj-card-3",
 				"cardHeader": "Classic Minimal Bedroom",
-				"cardSubtext": "Decor / Artchitecture"
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bed Room"
 			},
 			{
 				"cardImagePath": "./img/project/project_img4.png",
 				"cardImageAlt": "proj-card-4",
 				"cardHeader": "Modern Bedroom",
-				"cardSubtext": "Decor / Artchitecture"
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bed Room"
 			},
 			{
 				"cardImagePath": "./img/project/project_img5.png",
 				"cardImageAlt": "proj-card-5",
 				"cardHeader": "Minimal Bedroom table",
-				"cardSubtext": "Decor / Artchitecture"
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bed Room"
 			},
 			{
 				"cardImagePath": "./img/project/project_img6.png",
 				"cardImageAlt": "proj-card-6",
 				"cardHeader": "System Table",
-				"cardSubtext": "Decor / Artchitecture"
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bed Room"
 			},
 			{
 				"cardImagePath": "./img/project/project_img7.png",
 				"cardImageAlt": "proj-card-7",
 				"cardHeader": "Modern Medroom",
-				"cardSubtext": "Decor / Artchitecture"
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bed Room"
 			},
 			{
 				"cardImagePath": "./img/project/project_img8.png",
 				"cardImageAlt": "proj-card-8",
 				"cardHeader": "Modern Bedroom",
-				"cardSubtext": "Decor / Artchitecture"
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bed Room"
+			},
+			{
+				"cardImagePath": "./img/project/project_img1.png",
+				"cardImageAlt": "proj-card-1",
+				"cardHeader": "Exotic Bathroom",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bathroom"
+			},
+			{
+				"cardImagePath": "./img/project/project_img2.png",
+				"cardImageAlt": "proj-card-2",
+				"cardHeader": "Exotic Bathroom",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bathroom"
+			},
+			{
+				"cardImagePath": "./img/project/project_img3.png",
+				"cardImageAlt": "proj-card-3",
+				"cardHeader": "Exotic Bathroom",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bathroom"
+			},
+			{
+				"cardImagePath": "./img/project/project_img4.png",
+				"cardImageAlt": "proj-card-4",
+				"cardHeader": "Exotic Bathroom",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bathroom"
+			},
+			{
+				"cardImagePath": "./img/project/project_img5.png",
+				"cardImageAlt": "proj-card-5",
+				"cardHeader": "Exotic Bathroom",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bathroom"
+			},
+			{
+				"cardImagePath": "./img/project/project_img6.png",
+				"cardImageAlt": "proj-card-6",
+				"cardHeader": "Exotic Bathroom",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bathroom"
+			},
+			{
+				"cardImagePath": "./img/project/project_img7.png",
+				"cardImageAlt": "proj-card-7",
+				"cardHeader": "Exotic Bathroom",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bathroom"
+			},
+			{
+				"cardImagePath": "./img/project/project_img8.png",
+				"cardImageAlt": "proj-card-8",
+				"cardHeader": "Exotic Bathroom",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Bathroom"
+			},
+			{
+				"cardImagePath": "./img/project/project_img1.png",
+				"cardImageAlt": "proj-card-1",
+				"cardHeader": "Pretty Kitchen",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Kitchen"
+			},
+			{
+				"cardImagePath": "./img/project/project_img2.png",
+				"cardImageAlt": "proj-card-2",
+				"cardHeader": "Pretty Kitchen",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Kitchen"
+			},
+			{
+				"cardImagePath": "./img/project/project_img3.png",
+				"cardImageAlt": "proj-card-3",
+				"cardHeader": "Pretty Kitchen",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Kitchen"
+			},
+			{
+				"cardImagePath": "./img/project/project_img4.png",
+				"cardImageAlt": "proj-card-4",
+				"cardHeader": "Pretty Kitchen",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Kitchen"
+			},
+			{
+				"cardImagePath": "./img/project/project_img5.png",
+				"cardImageAlt": "proj-card-5",
+				"cardHeader": "Pretty Kitchen",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Kitchen"
+			},
+			{
+				"cardImagePath": "./img/project/project_img6.png",
+				"cardImageAlt": "proj-card-6",
+				"cardHeader": "Pretty Kitchen",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Kitchen"
+			},
+			{
+				"cardImagePath": "./img/project/project_img7.png",
+				"cardImageAlt": "proj-card-7",
+				"cardHeader": "Pretty Kitchen",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Kitchen"
+			},
+			{
+				"cardImagePath": "./img/project/project_img8.png",
+				"cardImageAlt": "proj-card-8",
+				"cardHeader": "Pretty Kitchen",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Kitchen"
+			},
+			{
+				"cardImagePath": "./img/project/project_img1.png",
+				"cardImageAlt": "proj-card-1",
+				"cardHeader": "Comfortable Living Area",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Living Area"
+			},
+			{
+				"cardImagePath": "./img/project/project_img2.png",
+				"cardImageAlt": "proj-card-2",
+				"cardHeader": "Comfortable Living Area",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Living Area"
+			},
+			{
+				"cardImagePath": "./img/project/project_img3.png",
+				"cardImageAlt": "proj-card-3",
+				"cardHeader": "Comfortable Living Area",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Living Area"
+			},
+			{
+				"cardImagePath": "./img/project/project_img4.png",
+				"cardImageAlt": "proj-card-4",
+				"cardHeader": "Comfortable Living Area",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Living Area"
+			},
+			{
+				"cardImagePath": "./img/project/project_img5.png",
+				"cardImageAlt": "proj-card-5",
+				"cardHeader": "Comfortable Living Area",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Living Area"
+			},
+			{
+				"cardImagePath": "./img/project/project_img6.png",
+				"cardImageAlt": "proj-card-6",
+				"cardHeader": "Comfortable Living Area",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Living Area"
+			},
+			{
+				"cardImagePath": "./img/project/project_img7.png",
+				"cardImageAlt": "proj-card-7",
+				"cardHeader": "Comfortable Living Area",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Living Area"
+			},
+			{
+				"cardImagePath": "./img/project/project_img8.png",
+				"cardImageAlt": "proj-card-8",
+				"cardHeader": "Comfortable Living Area",
+				"cardSubtext": "Decor / Artchitecture",
+				"category": "Living Area"
 			}
 		]}

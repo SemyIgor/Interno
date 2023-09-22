@@ -26,10 +26,14 @@
          </project-face-content>
       </article>
 
-      <section class="cards-module">
-         <div id="cards-module__content" class="cards-module__content">
+      <section id="cards-module__content" class="cards-module">
 
-            <cards-module-card :cards="cards"></cards-module-card>
+         <!-- Вывод табов -->
+         <categories-module :categories="tagsArray" @activate-it="chooseTag"></categories-module>
+
+         <div class="cards-module__content">
+            <!-- Вывод карточек -->
+            <cards-module-card :cards="filteredCards"></cards-module-card>
 
             <div class="blog-news__pagination">
                <div class="blog-news__pagiNumber">
@@ -51,7 +55,6 @@
             </div>
 
          </div>
-
       </section>
 
       <footer id="footer" class="footer">

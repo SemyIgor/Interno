@@ -26,8 +26,9 @@
       </article>
 
       <main class="details__main">
-         <div class="details__content" id="ample">
+         <div id="ample" class="details__content">
             <section class="details__blogs">
+
                <!-- Should show the first blog of the filtered list -->
                <blog-details v-bind:ample="filteredBlogs"></blog-details>
 
@@ -64,14 +65,12 @@
 
             <section class="details__tags">
                <h3 class="tags__title">Tags</h3>
+
                <!-- Should trace the choice -->
-               <div class="tags__items" id="maintags">
+               <div id="maintags" class="tags__items">
 
                   <tags-menu v-for="item in cloneTagsArray" v-bind:tags="item" v-bind:key="item.id"
                      @activate-it="chooseTag(item.id)" v-bind:class="item.activated"></tags-menu>
-                  <!-- 
-                  <tags-menu v-for="item in tagsArray" v-bind:tags="item" v-bind:key="item.id"
-                     @activate-it="chooseTag(item.id)" v-bind:class="item.activated"></tags-menu> -->
 
                </div>
             </section>
